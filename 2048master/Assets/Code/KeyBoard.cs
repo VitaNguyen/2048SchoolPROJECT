@@ -16,10 +16,7 @@ public class KeyBoard : MonoBehaviour {
         gm = GameObject.FindObjectOfType<GameMain>();
         }
 
-    void Start()
-    {
-
-    }
+  
 
     // Update is called once per frame
     void Update () {
@@ -40,4 +37,6 @@ public class KeyBoard : MonoBehaviour {
             gm.Move(Direction.Left);
         }
     }
+
+
 }

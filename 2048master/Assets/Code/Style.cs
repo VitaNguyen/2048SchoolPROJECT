@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class StyleData 
 { 
-    public Text number;
+    public int number;
     public Color32 BGColor;
     public Color32 TextColor;
 }
@@ -17,4 +17,10 @@ public class Style : MonoBehaviour
     
 
     public StyleData[] StyleData;
+
+    public static Style Instance { get; private set; }
+    private void Awake()
+    {
+        Instance = this;
+    }
 }
