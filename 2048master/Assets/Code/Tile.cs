@@ -47,6 +47,20 @@ public class Tile : MonoBehaviour {
 
     }
 
+    public Tile[,] CopyTile(Tile[,] a)
+    {
+        Tile[,] temp = new Tile[4, 4];
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                temp[i, j].Appear = a[i, j].Appear;
+            }
+        }
+
+        return temp;
+    }
+
     //Its like OOP but in the C# way
     public int Appear
     {
