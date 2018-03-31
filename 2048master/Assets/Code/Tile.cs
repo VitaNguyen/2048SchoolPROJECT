@@ -20,14 +20,18 @@ public class Tile : MonoBehaviour {
         TileTextNumber = transform.Find("TileNum").GetComponentInChildren<Text>();
         TileTextColor = transform.Find("TileNum").GetComponentInChildren<Text>();
         TileImage = transform.Find("TileNum").GetComponent<Image>();
+
+
     }
 
-    void ApplyTileStyle(int index) //method để chỉnh màu theo số
+    public void ApplyTileStyle(int index) //method để chỉnh màu theo số
     {
         TileTextNumber.text = Style.Instance.StyleData[index].number.ToString();
         TileTextColor.color = Style.Instance.StyleData[index].TextColor;
         TileImage.color = Style.Instance.StyleData[index].BGColor;
     }
+
+
 
 
     public void Invisible()
@@ -42,8 +46,8 @@ public class Tile : MonoBehaviour {
         TileTextNumber.enabled = true;
         TileTextColor.enabled = true;
         TileImage.enabled = true;
-        int index = (int)Math.Sqrt(num);
-        ApplyTileStyle(index - 1);
+       // int index = (int)Math.Sqrt(num);
+        ApplyTileStyle(num-1);
 
     }
 
@@ -81,5 +85,8 @@ public class Tile : MonoBehaviour {
                 Visible(number);
             }
         }
+
     }
+
+  
 }

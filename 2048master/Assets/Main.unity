@@ -3863,77 +3863,77 @@ MonoBehaviour:
       rgba: 4291289579
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4278190080
   - number: 8
     BGColor:
       serializedVersion: 2
-      rgba: 7778549
+      rgba: 4285968629
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 16
     BGColor:
       serializedVersion: 2
-      rgba: 6460916
+      rgba: 4284650996
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 32
     BGColor:
       serializedVersion: 2
-      rgba: 6257909
+      rgba: 4284447989
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 64
     BGColor:
       serializedVersion: 2
-      rgba: 4022262
+      rgba: 4282212342
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 128
     BGColor:
       serializedVersion: 2
-      rgba: 7458539
+      rgba: 4285648619
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 256
     BGColor:
       serializedVersion: 2
-      rgba: 6409708
+      rgba: 4284599788
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 512
     BGColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4283353324
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 1024
     BGColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4282212853
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 2048
     BGColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4281583342
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
   - number: 4096
     BGColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4278190080
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294967295
 --- !u!1 &1634431392
 GameObject:
   m_ObjectHideFlags: 0

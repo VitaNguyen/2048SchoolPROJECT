@@ -21,7 +21,7 @@ public class GameMain : MonoBehaviour {
             Debug.Log(AllTilesAtOnce[i].Row+ " "+ AllTilesAtOnce[i].Column + " "+i);
         }
 
-
+        Generate();
     }
 
     void Update()
@@ -48,7 +48,7 @@ public class GameMain : MonoBehaviour {
 
     void MoveToLeft(Tile[,] a)
     {
-        int n = 4;
+        int n = 5;
         while (n != 1)
         {
             for (int i = 0; i < 4; i++)
@@ -60,31 +60,18 @@ public class GameMain : MonoBehaviour {
                         a[i, j - 1].Appear = a[i, j].Appear;
                         a[i, j].Appear = 0;
                     }
-                }
+                     if (a[i, j].Appear == a[i, j - 1].Appear && a[i, j-1].Appear != 0 && a[i, j].Appear != 0)
+                    {
+                        a[i, j -1].Appear = a[i, j - 1].Appear +1;
+                        
+                        a[i, j].Appear = 0;
+                    }
+                 }
             }
-            n--;
+                    n--;
         }
     }
-    void MoveToRight(Tile[,] a)
-    {
-        int n = 4;
-        while (n != 1)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-            for (int j = 0; j < 3; j++)
-            {
-                if (a[i,j+1].Appear == 0 && a[i,j].Appear != 0)
-                {
-                    a[i ,j+1].Appear = a[i,j].Appear;
-                    a[i,j].Appear = 0;
-                }
-            }
-                
-            }
-            n--;
-        }
-    }
+   
 
     void RotateLeft()
     {
@@ -137,7 +124,12 @@ public class GameMain : MonoBehaviour {
 
     void MoveRight()
     {
-            MoveToRight(Tiles);
+        RotateLeft();
+        RotateLeft();
+        MoveToLeft(Tiles);
+        RotateRight();
+        RotateRight();
+
     }
 
     void MoveUp()
@@ -157,7 +149,6 @@ public class GameMain : MonoBehaviour {
     public void Move(Direction d)
     {
         Debug.Log(d.ToString() + " move.");
-        
             switch (d)
             {
                 case Direction.Up:
@@ -173,7 +164,6 @@ public class GameMain : MonoBehaviour {
                     MoveLeft();
                     break;
             }
-        
         Generate();
         
     }
