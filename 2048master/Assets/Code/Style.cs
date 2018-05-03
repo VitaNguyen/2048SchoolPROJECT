@@ -19,6 +19,7 @@ public class Style : MonoBehaviour
     public StyleData[] StyleData;
 
     public static Style Instance { get; private set; }
+
     private void Awake()
     {
         Instance = this;

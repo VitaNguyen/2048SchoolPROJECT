@@ -6,21 +6,19 @@ using UnityEngine.UI;
 
 [System.Serializable]
 public class Tile : MonoBehaviour {
-
+    
     private int number;
     public int Row;
     public int Column;
     private Text TileTextNumber;
     private Text TileTextColor;
     private Image TileImage;
-    
 
     void Awake()
     {
         TileTextNumber = transform.Find("TileNum").GetComponentInChildren<Text>();
         TileTextColor = transform.Find("TileNum").GetComponentInChildren<Text>();
         TileImage = transform.Find("TileNum").GetComponent<Image>();
-
 
     }
 
@@ -30,9 +28,6 @@ public class Tile : MonoBehaviour {
         TileTextColor.color = Style.Instance.StyleData[index].TextColor;
         TileImage.color = Style.Instance.StyleData[index].BGColor;
     }
-
-
-
 
     public void Invisible()
     {
@@ -46,23 +41,7 @@ public class Tile : MonoBehaviour {
         TileTextNumber.enabled = true;
         TileTextColor.enabled = true;
         TileImage.enabled = true;
-       // int index = (int)Math.Sqrt(num);
         ApplyTileStyle(num-1);
-
-    }
-
-    public Tile[,] CopyTile(Tile[,] a)
-    {
-        Tile[,] temp = new Tile[4, 4];
-        for (int i = 0; i < 4; i++)
-        {
-            for (int j = 0; j < 4; j++)
-            {
-                temp[i, j].Appear = a[i, j].Appear;
-            }
-        }
-
-        return temp;
     }
 
     //Its like OOP but in the C# way
@@ -83,6 +62,7 @@ public class Tile : MonoBehaviour {
             else
             {
                 Visible(number);
+
             }
         }
 

@@ -287,6 +287,11 @@
   <ItemGroup>
     <Compile Include="Assets\Code\GameMain.cs" />
     <Compile Include="Assets\Code\KeyBoard.cs" />
+    <Compile Include="Assets\Code\KeyBoardForLevelUp.cs" />
+    <Compile Include="Assets\Code\LevelUp.cs" />
+    <Compile Include="Assets\Code\Menu.cs" />
+    <Compile Include="Assets\Code\Score.cs" />
+    <Compile Include="Assets\Code\ScoreForLevelUp.cs" />
     <Compile Include="Assets\Code\Style.cs" />
     <Compile Include="Assets\Code\Tile.cs" />
   </ItemGroup>
